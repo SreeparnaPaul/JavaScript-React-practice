@@ -1,0 +1,15 @@
+Javascript is a synchronous single-threaded language.
+Everything in javascript happens inside an execution context.
+
+var n=2;
+function square(num){--> here num is called argument
+    var ans= num*num;
+    return ans;
+}
+var square2 = square(n)--> here n is parameter,in this line i am invoking the square function
+
+Javascript has its own call stack, in the bottom it has the global execution context.
+Supposse it has its first execution context is E1, it will put upon global execution context. 
+Once E1 executes,the control goes over the global execution context. this way javascript code executes.
+
+Call stack maintains the order of execution of execution context.
