@@ -13,3 +13,5 @@ Supposse it has its first execution context is E1, it will put upon global execu
 Once E1 executes,the control goes over the global execution context. this way javascript code executes.
 
 Call stack maintains the order of execution of execution context.
+
+window -->it is an global object created by javascript along with execution context
