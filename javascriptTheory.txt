@@ -15,3 +15,10 @@ Once E1 executes,the control goes over the global execution context. this way ja
 Call stack maintains the order of execution of execution context.
 
 window -->it is an global object created by javascript along with execution context
+
+
+In JavaScript, the garbage collector is a built-in mechanism that manages memory by 
+automatically deallocating or "collecting" memory that is no longer being used or referenced 
+by the program. This helps prevent memory leaks and ensures that your JavaScript applications run 
+efficiently.
+
