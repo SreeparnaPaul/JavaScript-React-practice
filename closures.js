@@ -56,4 +56,3 @@ f();
 // 4.Iterators
 // 5 functions like once
 // 6. memoize
-7.
