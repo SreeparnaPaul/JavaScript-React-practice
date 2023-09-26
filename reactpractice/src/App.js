@@ -1,5 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ClassCompo from "./ClassCompo";
+import Parent from "./Parent";
 function App() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -33,6 +36,12 @@ function App() {
         <button onClick={mapData}>See Mapped Arrays</button>
         <button onClick={filtered}>See Filtered Arrays</button>
       </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/class" element={<ClassCompo />} />
+          <Route path="/parent" element={<Parent />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
