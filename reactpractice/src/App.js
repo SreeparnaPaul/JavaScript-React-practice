@@ -3,27 +3,28 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ClassCompo from "./ClassCompo";
 import Parent from "./Parent";
+import Ref from "./Ref";
 function App() {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setUsers(json));
-  }, []);
+  // const [users, setUsers] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/users")
+  //     .then((response) => response.json())
+  //     .then((json) => setUsers(json));
+  // }, []);
 
-  const mapData = () => {
-    let mappedArray = users.map((user) => user.id * 2);
-    console.log(mappedArray);
-  };
-  const filtered = () => {
-    let filteredData = users.filter((user) => {
-      return user.name.toLowerCase().includes("a");
-    });
-    console.log(filteredData);
-  };
+  // const mapData = () => {
+  //   let mappedArray = users.map((user) => user.id * 2);
+  //   console.log(mappedArray);
+  // };
+  // const filtered = () => {
+  //   let filteredData = users.filter((user) => {
+  //     return user.name.toLowerCase().includes("a");
+  //   });
+  //   console.log(filteredData);
+  // };
   return (
     <div className="App">
-      <div className="container">
+      {/* <div className="container">
         <h1>Users</h1>
         <div className="card">
           {users?.map((user) => (
@@ -35,11 +36,12 @@ function App() {
         </div>
         <button onClick={mapData}>See Mapped Arrays</button>
         <button onClick={filtered}>See Filtered Arrays</button>
-      </div>
+      </div> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/class" element={<ClassCompo />} />
+          <Route exact path="/" element={<ClassCompo />} />
           <Route path="/parent" element={<Parent />} />
+          <Route path="/ref" element={<Ref />} />
         </Routes>
       </BrowserRouter>
     </div>
