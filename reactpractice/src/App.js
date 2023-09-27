@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ClassCompo from "./ClassCompo";
 import Parent from "./Parent";
 import Ref from "./Ref";
+import Debounce from "./Debounce";
 function App() {
   // const [users, setUsers] = useState([]);
   // useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/" element={<ClassCompo />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/ref" element={<Ref />} />
+          <Route path="/debounce" element={<Debounce />} />
         </Routes>
       </BrowserRouter>
     </div>
