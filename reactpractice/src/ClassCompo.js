@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Question from "./Question";
 
 export default class ClassCompo extends Component {
   constructor() {
@@ -15,6 +16,7 @@ export default class ClassCompo extends Component {
         {this.state.array.map((item) => {
           return item * 2;
         })}
+        <Question />
       </div>
     );
   }

@@ -5,6 +5,7 @@ import ClassCompo from "./ClassCompo";
 import Parent from "./Parent";
 import Ref from "./Ref";
 import Debounce from "./Debounce";
+import User from "./User";
 function App() {
   // const [users, setUsers] = useState([]);
   // useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<ClassCompo />} />
+          <Route path="/user" element={<User />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/ref" element={<Ref />} />
           <Route path="/debounce" element={<Debounce />} />
